@@ -38,8 +38,8 @@ This is a complete list of available environment variables; required variables a
 | WEB_SERVER_MAX_REQUESTS_JITTER | Random jitter to add to the maximum number of requests a worker will process before restarting                                                      |          | `100`                     |
 | WEB_SERVER_TIMEOUT             | Timeout for web server requests (in seconds)                                                                                                        |          | `300`                     |
 | WEB_SERVER_WORKER_CONNECTIONS  | Maximum number of simultaneous clients a single process can handle                                                                                  |          | `1000`                    |
-| EMULATORJS_SFU_HOST        | Host name of mediasoup SFU instance                                                                             |          | `localhost`            |  
-| EMULATORJS_SFU_PORT        | Port number of mediasoup SFU instance                                                                             |          | `3001`            |
+| SFU_HOST                       | Host name of mediasoup SFU instance                                                                                                                 |          | `localhost`               |
+| SFU_PORT                       | Port number of mediasoup SFU instance                                                                                                               |          | `3001`                    |
 
 ## Dependencies
 
