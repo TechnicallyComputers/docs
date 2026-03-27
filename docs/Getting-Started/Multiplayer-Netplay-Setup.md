@@ -45,9 +45,9 @@ You can also copy from the [RomM examples](https://github.com/rommapp/romm/blob/
 | `SFU_PORT`                 | RomM             | SFU HTTP/WS port (default `3001`)                                                                        |
 | `ROMM_API_BASE_URL`        | SFU              | URL RomM is reachable at from the SFU (e.g. `http://romm:8080` inside Docker)                            |
 
-### 4. Enable netplay via config or environment
+### 4. Enable netplay via config
 
-Enable netplay either in RomM config (e.g. `/romm/config/config.yml`):
+Enable netplay in RomM config (e.g. `/romm/config/config.yml`):
 
 ```yaml
 emulatorjs:
@@ -55,13 +55,7 @@ emulatorjs:
     enabled: true
 ```
 
-Or via environment variable (overrides config):
-
-```yaml
-SFU_NETPLAY_ENABLED=true
-```
-
-When `SFU_NETPLAY_ENABLED=true`, RomM loads EmulatorJS-SFU from jsDelivr. When `false`, it uses the original EmulatorJS from cdn.emulatorjs.org (no netplay).
+To use **SFU-based** netplay, set `EJS_SFU_NETPLAY_ENABLED=true` (env) or `emulatorjs.netplay.ejs_sfu_enabled: true` (config). When `EJS_SFU_NETPLAY_ENABLED=true`, RomM loads EmulatorJS-SFU from jsDelivr. When `false`, RomM loads the original EmulatorJS from cdn.emulatorjs.org; with `netplay.enabled: true` that enables P2P netplay instead.
 
 ### 5. Expose required ports
 
